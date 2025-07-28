@@ -1,0 +1,68 @@
+<section class="w-full min-h-16 flex justify-center items-center">
+  <div class="bg-blue-800 w-3/5 rounded-2xl p-6">
+    <form class="flex flex-col gap-6" (ngSubmit)="onSubmit()">
+      <div class="flex flex-col md:flex-row gap-6">
+        <!-- Left Column -->
+        <div class="flex flex-col gap-4 flex-1">
+          <div class="flex flex-col">
+            <label for="initial" class="text-white font-bold text-lg">Initial Investment:</label>
+            <input
+              [(ngModel)]="Initial_Investment"
+              name="initialInvestment"
+              type="number"
+              id="initial"
+              placeholder="Enter amount"
+              class="p-2 rounded-lg w-full text-black bg-gray-200 border-white border-2"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label for="annual" class="text-white font-bold text-lg">Annual Investment:</label>
+            <input
+              [(ngModel)]="Annual_Investment"
+              name="annualInvestment"
+              type="number"
+              id="annual"
+              placeholder="Enter amount"
+              class="p-2 rounded-lg w-full text-black bg-gray-200 border-white border-2"
+            />
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="flex flex-col gap-4 flex-1">
+          <div class="flex flex-col">
+            <label for="returnRate" class="text-white font-bold text-lg">Expected Return Rate (%):</label>
+            <input
+              [(ngModel)]="Return_Rate"
+              name="returnRate"
+              type="number"
+              id="returnRate"
+              placeholder="Enter percentage"
+              class="p-2 rounded-lg w-full text-black bg-gray-200 border-white border-2"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label for="duration" class="text-white font-bold text-lg">Duration (Days):</label>
+            <input
+              [(ngModel)]="Duration"
+              name="duration"
+              type="number"
+              id="duration"
+              placeholder="Enter number of Years"
+              class="p-2 rounded-lg w-full text-black bg-gray-200 border-white border-2"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <button
+          type="submit"
+          class="active:scale-95 bg-white text-black  font-black px-6 py-2 rounded-lg hover:bg-gray-200 transition duration-300"
+        >
+          Calculate
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
