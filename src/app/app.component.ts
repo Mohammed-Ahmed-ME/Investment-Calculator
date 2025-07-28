@@ -4,10 +4,9 @@ import { UserInputComponent } from "./Components/user-input/user-input.component
 import {InvestmentResultsComponent} from "./Components/investment-results/investment-results.component";
 import {CurrencyPipe, DecimalPipe} from "@angular/common";
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  templateUrl: './app.component.html',
-  imports: [HeaderComponent, UserInputComponent, InvestmentResultsComponent, CurrencyPipe, DecimalPipe],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    imports: [HeaderComponent, UserInputComponent, InvestmentResultsComponent, CurrencyPipe, DecimalPipe]
 })
 export class AppComponent {
   submitted :any
